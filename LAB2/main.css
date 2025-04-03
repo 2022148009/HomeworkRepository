@@ -1,0 +1,57 @@
+h1 {
+    /* 6, 7 */
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    /* 4 */
+    margin: 10px;
+    
+}
+
+span {
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+}
+
+select {
+    position: relative;
+    left: 10px;
+}
+
+button {
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    /* 9, 10 */
+    width: 70px;
+    height: 25px;
+}
+
+.Signup, .Login {
+    /* 1 */
+    background-color: aquamarine;
+}
+
+.Cancel {
+    background-color: red;
+    /* 8 */
+    color: white;
+}
+
+h1, p {
+    /* 2 */
+    text-align: center; 
+}
+
+.container {
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    /* 5 */
+    border: 3px solid black;
+    /* 3 */
+    padding: 20px;
+}
