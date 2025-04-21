@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1020px;
+    height: 150vh;  
+    overflow-x: hidden;
+}
+
+@keyframes start {
+    0% {transform: translateX(100%)}
+    100% {transform: translateX(0%)}
+}
+
+header {
+    position: relative;
+    animation-name: start;
+    animation-duration: 2s;
+}
+
+.navcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap : nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.mainpage {
+    border-top: 3px red solid;
+    border-bottom: 3px red solid;   
+}
+
+
+/* 이미지 부분 */
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.Moviescontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.imagecontainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    border-top: 1px solid black;
+}
+
+.Icontain {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    height: 500px;    
+    border: 1px solid black;
+}
+
+.image {
+    transition: transform 2s ease;
+    overflow: hidden;
+    transform-origin: top;
+    height: 200px;
+}  
+
+.image:hover {
+    transform: scale(2, 2);
+}
+
+.image:hover .imgalt{
+    opacity: 1;
+}
+
+.imgalt {
+    text-align: center;
+    opacity: 0;
+}
+
+img {
+    width: 100px;   
+    height: 180px;
+    padding: 5px;
+}
+
+
+/**/
+
+.Aboutcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentcontainer {
+    column-count: 2;
+    column-rule: 1px solid black;
+    margin-top: 10px;
+    border-top: 1px solid black;
+}   
+
+
+@media screen and (max-width : 800px) {
+    body {
+        width: 100%;
+    }
+    
+    .navcontainer, .Moviescontainer, .Aboutcontainer {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .imagecontainer {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .Icontain {
+        flex: 0 0 45%;
+        max-width: 50%;
+    }
+
+    .contentcontainer {
+        column-count: 1;
+    }
+
+}
+
+@media screen and (max-width : 480px) {
+    .Icontain {
+        max-width: 100%;
+        flex: 100%;
+    }
+
+    img {
+        width: 150px;
+    }
+}
+
+
+/*LAB2의 CSS 스타일시트*/
+h1 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    margin: 10px;
+}
+
+span {
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+}
+
+select {
+    position: relative;
+    left: 10px;
+}
+
+button {
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    width: 70px;
+    height: 25px;
+}
+
+.Signup, .Login {
+    background-color: aquamarine;
+}
+
+.Cancel {
+    background-color: red;
+    color: white;
+}
+
+.title, .link {
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid black;
+    padding: 20px;
+}
