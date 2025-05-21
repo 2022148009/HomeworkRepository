@@ -55,7 +55,7 @@
         };
 
         function load(filtereddata) {
-            if (end > filtereddata.length) return;
+            if (end >= filtereddata.length) return;
             const next = filtereddata.slice(end, end + 4);
             displayed = displayed.concat(next);
             appendItems(next); 
