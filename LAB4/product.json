@@ -1,0 +1,177 @@
+[
+    {
+        "name":"Toy Story",
+        "overview":"Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+        "date":"1995-10-30",
+        "image":"toystory.jpg",
+        "vote":"7.7"
+    },
+
+    {
+        "name":"Jumanji",
+        "overview":"When siblings Judy and Peter discover an enchanted board game that opens the door to a magical world, they unwittingly invite Alan -- an adult who's been trapped inside the game for 26 years -- into their living room. Alan's only hope for freedom is to finish the game, which proves risky as all three find themselves running from giant rhinoceroses, evil monkeys and other terrifying creatures.",
+        "date":"1995-12-15", 
+        "image":"jumanji.jpg",
+        "vote":"6.9"   
+    },
+    
+    {
+        "name":"Memento",
+        "overview":"Suffering short-term memory loss after a head injury, Leonard Shelby embarks on a grim quest to find the lowlife who murdered his wife in this gritty, complex thriller that packs more knots than a hangman's noose. To carry out his plan, Shelby snaps Polaroids of people and places, jotting down contextual notes on the backs of photos to aid in his search and jog his memory. He even tattoos his own body in a desperate bid to remember.",
+        "date":"2000-10-11", 
+        "image":"memento.jpg",
+        "vote":"8.1"   
+    },
+
+    {
+        "name":"Arrival",
+        "overview":"Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat.",
+        "date":"2016-11-10", 
+        "image":"arrival.jpg",
+        "vote":"7.2"   
+    },
+
+    {
+        "name":"Aladdin",
+        "overview":"Princess Jasmine grows tired of being forced to remain in the palace and she sneaks out into the marketplace  in disguise where she meets street-urchin Aladdin and the two fall in love, although she may only marry a prince. After being thrown in jail, Aladdin and becomes embroiled in a plot to find a mysterious lamp with which the evil Jafar hopes to rule the land.",
+        "date":"1992-11-25", 
+        "image":"aladdin.jpg",
+        "vote":"7.4"   
+    },
+
+    {
+        "name":"Batman",
+        "overview":"The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker, who has seized control of Gotham's underworld.",
+        "date":"1989-06-23", 
+        "image":"batman.jpg",
+        "vote":"7.0"   
+    },
+
+    {
+        "name":"Interstellar",
+        "overview":"Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+        "date":"2014-11-05", 
+        "image":"interstellar.jpg",
+        "vote":"8.1"   
+    },
+
+    {
+        "name":"Grumpier Old Men",
+        "overview":"A family wedding reignites the ancient feud between next-door neighbors and fishing buddies John and Max. Meanwhile, a sultry Italian divorcée opens a restaurant at the local bait shop, alarming the locals who worry she'll scare the fish away. But she's less interested in seafood than she is in cooking up a hot time with Max.",
+        "date":"1995-12-22", 
+        "image":"grumpieroldmen.jpg",
+        "vote":"6.5"   
+    },
+
+    {
+        "name":"Heat",
+        "overview":"Obsessive master thief, Neil McCauley leads a top-notch crew on various insane heists throughout Los Angeles while a mentally unstable detective, Vincent Hanna pursues him without rest. Each man recognizes and respects the ability and the dedication of the other even though they are aware their cat-and-mouse game may end in violence.",
+        "date":"1995-12-15", 
+        "image":"heat.jpg",
+        "vote":"7.7"   
+    },
+
+    {
+        "name":"Tom and Huck",
+        "overview":"A mischievous young boy, Tom Sawyer, witnesses a murder by the deadly Injun Joe. Tom becomes friends with Huckleberry Finn, a boy with no future and no family. Tom has to choose between honoring a friendship or honoring an oath because the town alcoholic is accused of the murder. Tom and Huck go through several adventures trying to retrieve evidence.",
+        "date":"1995-12-22", 
+        "image":"tomandhuck.jpg",
+        "vote":"5.4"   
+    },
+
+    {
+        "name":"GoldenEye",
+        "overview":"James Bond must unmask the mysterious head of the Janus Syndicate and prevent the leader from utilizing the GoldenEye weapons system to inflict devastating revenge on Britain.",
+        "date":"1995-11-16", 
+        "image":"goldeneye.jpg",
+        "vote":"6.6"   
+    },
+
+    {
+        "name":"Balto",
+        "overview":"An outcast half-wolf risks his life to prevent a deadly epidemic from ravaging Nome, Alaska.",
+        "date":"1995-12-22", 
+        "image":"balto.jpg",
+        "vote":"7.1"   
+    },
+
+    {
+        "name":"Four Rooms",
+        "overview":"It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.",
+        "date":"1995-12-09", 
+        "image":"fourrooms.jpg",
+        "vote":"6.5"   
+    },
+
+    {
+        "name":"Il postino",
+        "overview":"Simple Italian postman learns to love poetry while delivering mail to a famous poet; he uses this to woo local beauty Beatrice.",
+        "date":"1994-09-22", 
+        "image":"ilpostino.jpg",
+        "vote":"7.6"   
+    },
+
+    {
+        "name":"Eye for an Eye",
+        "overview":"It's fire and brimstone time as grieving mother Karen McCann takes justice into her own hands when a kangaroo court in Los Angeles fails to convict Robert Doob, the monster who raped and murdered her 17-year-old daughter.",
+        "date":"1996-01-12", 
+        "image":"eyeforaneye.jpg",
+        "vote":"5.8"   
+    },
+
+    {
+        "name":"The Morning After",
+        "overview":"The Morning After is a feature film that consists of 8 vignettes that are inter-cut throughout the film. The 8 vignettes are about when you wake up next to someone the next morning...",
+        "date":"2015-01-11", 
+        "image":"themorningafter.jpg",
+        "vote":"4.0"   
+    },
+
+    {
+        "name":"Robin Hood",
+        "overview":"Yet another version of the classic epic, with enough variation to make it interesting. The story is the same, but some of the characters are quite different from the usual, in particular Uma Thurman's very special maid Marian. The photography is also great, giving the story a somewhat darker tone.",
+        "date":"1991-05-13", 
+        "image":"robinhood.jpg",
+        "vote":"5.7"   
+    },
+
+    {
+        "name":"La Rafle",
+        "overview":"1942. Joseph is eleven. And this June morning, he must go to school, a yellow star sown on his chest. He receives the support of a goods dealer. The mockery of a baker. Between kindness and contempt, Jo, his Jewish friends, their families, learn of life in an occupied Paris, on the Butte Montmartre, where they've taken shelter. At least that's what they think, until that morning on July 16th 1942, when their fragile happiness is toppled over.",
+        "date":"2010-03-10", 
+        "image":"larafle.jpg",
+        "vote":"7.5"   
+    },
+
+    {
+        "name":"City of Fear",
+        "overview":"An escaped convict gets a hold of some radioactive material after his escape. Authorities desperately try to find the man that unknowingly is threating the lives of everyone in the city.",
+        "date":"1959-02-01", 
+        "image":"cityoffear.jpg",
+        "vote":"6.3"   
+    },
+
+    {
+        "name":"The Lion King",
+        "overview":"A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it.",
+        "date":"1994-06-23", 
+        "image":"thelionking.jpg",
+        "vote":"8.0"   
+    },
+
+    {
+        "name":"Knuckle",
+        "overview":"An epic 12-year journey into the brutal and secretive world of Irish Traveler bare-knuckle fighting. This film follows a history of violent feuding between rival clans.",
+        "date":"2011-12-09", 
+        "image":"knuckle.jpg",
+        "vote":"5.1 "   
+    },
+
+    {
+        "name":"Forest of Bliss",
+        "overview":"Forest of Bliss is an unsparing yet redemptive account of the inevitable griefs, religious passions and frequent happinesses that punctuate daily life in Benares, India's most holy city. The film unfolds from one sunrise to the next without commentary, subtitles or dialogue. It is an attempt to give the viewer a wholly authentic, though greatly magnified and concentrated, sense of participation in the experiences examined by the film.",
+        "date":"1986-01-01", 
+        "image":"forestofbliss.jpg",
+        "vote":"6.0"   
+    }
+]

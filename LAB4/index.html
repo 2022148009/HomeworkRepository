@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./main.css">
+    <title>LAB4_2022148009</title>
+</head>
+<body>
+    <div class="headercontainer">
+        <header>
+            <h1>인프밍 영화 정보 사이트입니다.</h1>
+        </header>
+    </div>
+    
+    <nav class="navcontainer">
+        <a class="mainpage navitem" href="#">메인페이지</a>
+        <a class="navitem" href="./login.html">로그인</a>
+        <a class="navitem" href="./signup.html">회원가입</a>
+    </nav>
+
+    <form action="#">
+        <input style="margin-right: 2%; width: 87%; height: 30px;" id="searchTerm" type="text" placeholder="키워드를 입력하세요.">
+        <button style="width: 10%; height: 30px;" id="filterbtn">Filter results</button>
+    
+        <h1 style="margin-top: 50px; ">Movies</h1>
+        <hr style="margin-bottom: 20px;">
+
+        <div class="sortimgcontainer">
+            <div class="sort">
+                <h1 style="margin-left: 8%; font-size: 22px;">정렬 기준</h1>
+                <label><input class="radio" type="radio" id="1" name="sort">평점 내림차순</label> <br>
+                <label><input class="radio" type="radio" id="2" name="sort">평점 오름차순</label> <br>
+                <label><input class="radio" type="radio" id="3" name="sort">개봉 내림차순</label> <br>
+                <label><input class="radio" type="radio" id="4" name="sort">개봉 오름차순</label> <br>
+            </div>
+
+            <main>
+            </main>
+
+        </div>
+    </form>
+
+    <script>
+        let end = 4;
+        let datacache = []; // json data
+        let displayed = []; // display된 데이터
+        let filtereddata = [];
+
+        // infinite scroll
+        window.onscroll = () => {
+            if (window.scrollY + window.innerHeight >= document.body.offsetHeight - 10) {
+                load(filtereddata);
+            }
+        };
+
+        function load(filtereddata) {
+            if (end > filtereddata.length) return;
+            const next = filtereddata.slice(end, end + 4);
+            displayed = displayed.concat(next);
+            appendItems(next); 
+            end += 4;
+        }
+
+        fetch("./product.json")
+        .then(response => response.json())
+        .then(data => {
+            datacache = data;
+            filtereddata = data;
+            displayed = data.slice(0, 4);
+            setupFilter(); 
+            appendItems(displayed);
+        });
+
+        function appendItems(data) {
+            for (let p of data) {
+                fetchBlob(p);
+            }
+        }
+
+        function fetchBlob(p) {
+            const url = `image/${p.image}`;
+            fetch(url)
+                .then(response => response.blob())
+                .then(blob => show(blob, p));
+        }
+
+        function show(blob, product) {
+            const objectURL = URL.createObjectURL(blob);
+            const main = document.querySelector("main");
+
+            const section = document.createElement("section");
+            const name = document.createElement("h2");
+            const date = document.createElement("p");
+            const vote = document.createElement("p");
+            const image = document.createElement("img");
+            const script = document.createElement("div");
+
+            name.textContent = product.name;
+            date.textContent = '개봉날짜 : ' + product.date;
+            vote.textContent = '평점 : ' + product.vote + ' / 10';
+            script.innerHTML = '줄거리 : <br>' + product.overview;
+
+            image.src = objectURL;
+            image.alt = name.textContent;
+
+            section.appendChild(image);
+            section.appendChild(name);
+            section.appendChild(date);
+            section.appendChild(vote);
+            section.appendChild(script);
+
+            main.appendChild(section);
+        }
+
+        function setupFilter() {
+            const categorys = document.querySelectorAll('.radio');
+            const searchTerm = document.querySelector('#searchTerm');
+            const searchBtn = document.querySelector('button');
+            const main = document.querySelector('main');
+
+            let lastCategory = '0';
+            let lastSearch = '';
+
+            searchBtn.addEventListener("click", filterCategory);
+            categorys.forEach(val => val.addEventListener("change", filterCategory));
+
+            function filterCategory(e) {
+                e.preventDefault();
+
+                let categoryid = '0';
+                for (let i of categorys) {
+                    if (i.checked) {
+                        categoryid = i.id;
+                        break;
+                    }
+                }
+
+                if (categoryid === lastCategory && searchTerm.value.trim() === lastSearch) {
+                    return;
+                }
+
+                lastCategory = categoryid;
+                lastSearch = searchTerm.value.trim();
+
+                let filtered = [...datacache];
+
+                if (categoryid === '1') {
+                    filtered.sort((a, b) => b.vote - a.vote);
+                } 
+                else if (categoryid === '2') {
+                    filtered.sort((a, b) => a.vote - b.vote);
+                } 
+                else if (categoryid === '3') {
+                    filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+                } 
+                else if (categoryid === '4') {
+                    filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+                } 
+
+                if (lastSearch !== '') {
+                    const term = lastSearch.toLowerCase();
+                    filtered = filtered.filter(movie => movie.name.toLowerCase().includes(term));
+                }
+
+                if (filtered.length === 0) {
+                    const para = document.createElement('p');
+                    para.className = "err";
+                    para.textContent = 'No results to display!';
+                    main.appendChild(para);
+                }
+
+                main.innerHTML = '';
+                filtereddata = [...filtered];
+                displayed = filtereddata.slice(0, Math.min(4, filtereddata.length)); 
+                end = 4;
+                appendItems(displayed);
+            }
+        }
+    </script>
+</body>
+</html>
