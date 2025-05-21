@@ -20,7 +20,7 @@
     </nav>
 
     <form action="#">
-        <input style="border: 0.1px black solid; margin-left: 3px; margin-right: 1%; width: 87%; height: 30px;" id="searchTerm" type="text" placeholder="키워드를 입력하세요.">
+        <input style="border: 0.1px black solid; margin-right: 2%; width: 87%; height: 30px;" id="searchTerm" type="text" placeholder="키워드를 입력하세요.">
         <button style="width: 10%; height: 30px;" id="filterbtn">Filter results</button>
     
         <h1 style="margin-top: 50px; ">Movies</h1>
@@ -59,30 +59,30 @@
             const next = filtereddata.slice(end, end + 4);
             displayed = displayed.concat(next);
             appendItems(next); 
-            end += 4;
+            end += 4;   
         }
 
         fetch("./product.json")
         .then(response => response.json())
         .then(data => {
-            datacache = data;
-            filtereddata = data;
+            datacache = [...data];
+            filtereddata = [...data];
             displayed = data.slice(0, 4);
             setupFilter(); 
             appendItems(displayed);
         });
 
-        function appendItems(data) {
+        async function appendItems(data) {
             for (let p of data) {
-                fetchBlob(p);
+                await fetchBlob(p);
             }
         }
 
-        function fetchBlob(p) {
+        async function fetchBlob(p) {
             const url = `image/${p.image}`;
-            fetch(url)
-                .then(response => response.blob())
-                .then(blob => show(blob, p));
+            const response = await fetch(url);
+            const blob = await response.blob();
+            show(blob, p);
         }
 
         function show(blob, product) {
@@ -146,10 +146,10 @@
                 let filtered = [...datacache];
 
                 if (categoryid === '1') {
-                    filtered.sort((a, b) => b.vote - a.vote);
+                    filtered.sort((a, b) => parseFloat(b.vote) - parseFloat(a.vote));
                 } 
                 else if (categoryid === '2') {
-                    filtered.sort((a, b) => a.vote - b.vote);
+                    filtered.sort((a, b) => parseFloat(a.vote) - parseFloat(b.vote));
                 } 
                 else if (categoryid === '3') {
                     filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
