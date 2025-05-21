@@ -163,14 +163,15 @@
                     filtered = filtered.filter(movie => movie.name.toLowerCase().includes(term));
                 }
 
+                main.innerHTML = '';
+
                 if (filtered.length === 0) {
                     const para = document.createElement('p');
                     para.className = "err";
                     para.textContent = 'No results to display!';
                     main.appendChild(para);
                 }
-
-                main.innerHTML = '';
+                
                 filtereddata = [...filtered];
                 displayed = filtereddata.slice(0, Math.min(4, filtereddata.length)); 
                 end = 4;
