@@ -73,16 +73,18 @@
         });
 
         async function appendItems(data) {
-            for (let p of data) {
-                await fetchBlob(p);
-            }
-        }
+            const blobs = await Promise.all(
+                data.map(async p => {
+                    const url = `image/${p.image}`;
+                    const response = await fetch(url);
+                    const blob = await response.blob();
+                    return { blob, product: p };
+                })
+            );
 
-        async function fetchBlob(p) {
-            const url = `image/${p.image}`;
-            const response = await fetch(url);
-            const blob = await response.blob();
-            show(blob, p);
+            for (let item of blobs) {
+                show(item.blob, item.product);
+            }
         }
 
         function show(blob, product) {
