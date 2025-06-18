@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <title>LAB5_2022148009</title>
+</head>
+<body>
+    <div class="headercontainer">
+        <header>
+            <h1>인프밍 영화 정보 사이트입니다.</h1>
+        </header>
+    </div>
+    
+    <nav class="navcontainer">
+        <a class="mainpage navitem" href="#">메인페이지</a>
+        <a class="navitem" href="/login">로그인</a>
+        <a class="navitem" href="/signup">회원가입</a>
+    </nav>
+
+    <form id="filterForm" method="GET" action="/">
+        <input style="border: 0.1px black solid; margin-right: 2%; width: 87%; height: 30px;" 
+        id="searchTerm"
+        name="searchTerm"
+        type="text" placeholder="키워드를 입력하세요.">
+        <button style="width: 10%; height: 30px;" id="filterbtn">Filter results</button>
+    
+        <h1 style="margin-top: 50px; ">Movies</h1>
+        <hr style="margin-bottom: 20px;">
+
+        <div class="sortimgcontainer">
+            <div class="sort">
+                <h1 style="margin-left: 8%; font-size: 22px;">정렬 기준</h1>
+                <label><input class="radio" type="radio" id="1" name="sort" value="rate_desc">평점 내림차순</label> <br>
+                <label><input class="radio" type="radio" id="2" name="sort" value="rate_asc">평점 오름차순</label> <br>
+                <label><input class="radio" type="radio" id="3" name="sort" value="release_desc">개봉 내림차순</label> <br>
+                <label><input class="radio" type="radio" id="4" name="sort" value="release_asc">개봉 오름차순</label> <br>
+            </div>
+
+            <main>
+            </main>
+
+        </div>
+    </form>
+    
+    <script>
+    document.querySelectorAll('input[name="sort"]').forEach(radio => {
+        radio.addEventListener('change', () => {
+        document.getElementById('filterForm').submit();
+        });
+    });
+    </script>
+</body>
+</html>

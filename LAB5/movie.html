@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <title>LAB5_2022148009</title>
+
+    <style>
+        .moviedata {
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(211, 211, 211);
+            border-radius: 20px;
+            gap: 30px;
+            align-items: center;
+            justify-content: space-evenly;
+
+            height: 80vh;
+        }
+
+        .textdata {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        img {
+            width: 30%;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }   
+
+        .comments {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .comments p {
+            border-bottom: 1px solid lightgray;
+            padding-left: 3px;
+            font-size: 20px;
+        }
+
+        #newcomment {
+            height: 50px;
+            width: 81%;
+            border-left: 1px solid black;
+        }
+        
+        button {
+            height: 50px;
+            width: 15%;
+            background-color: lightblue;
+            border-radius: 5px;
+            margin-left: 2.5%;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="headercontainer">
+        <header>
+            <h1>인프밍 영화 정보 사이트입니다.</h1>
+        </header>
+    </div>
+    
+    <nav class="navcontainer">
+        <a class="mainpage navitem" href="/">메인페이지</a>
+        <a class="navitem" href="/login">로그인</a>
+        <a class="navitem" href="/signup">회원가입</a>
+    </nav>
+
+    <div class="moviedata"></div>
+    
+    <h1 style="margin-top: 20px; margin-bottom: 20px;">영화 후기</h1>
+
+    <div class="comments"></div>
+
+</body>
+</html>
